@@ -887,10 +887,10 @@ background-color: var(--main-color);
 
 /* Para pantallas extremadamente pequeñas, menos de 450px */
 @media (max-width: 450px) {
-    .servicios-info h4 {
+    .certificaciones-info h4 {
         font-size: 1.6rem; 
     }
-    .servicios-info p {
+    .certificaciones-info p {
         font-size: 1.1rem; 
         line-height: 1.4; 
         margin-top: 0.5rem;
@@ -900,7 +900,6 @@ background-color: var(--main-color);
         height: 90vw;
     }
     .habilidades h2,
-    .certificaciones h2,
     .proyectos h2,
     .contacto h2 {
         font-size: 1rem; /* Tamaño de título para secciones */
@@ -933,13 +932,13 @@ background-color: var(--main-color);
   
 /* Para pantallas ultra pequeñas, menos de 250px */
 @media (max-width: 350px) {
-    .servicios-info h4 {
+    .certificaciones h4 {
         font-size: 1.6rem; 
     }
     .secTi{
         font-size: 1.6rem;
     }
-    .servicios-info p {
+    .certificaciones p {
         font-size: 1.1rem; 
         line-height: 1.4; 
         margin-top: 0.5rem;
@@ -951,10 +950,10 @@ background-color: var(--main-color);
 
 /* Para pantallas ultra pequeñas, menos de 250px */
 @media (max-width: 250px) {
-    .servicios-info h4 {
+    .certificaciones h4 {
         font-size: 1.6rem; 
     }
-    .servicios-info p {
+    .certificaciones p {
         font-size: 1.1rem; 
         line-height: 1.4; 
         margin-top: 0.5rem;
