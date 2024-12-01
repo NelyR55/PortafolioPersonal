@@ -893,7 +893,7 @@ background-color: var(--main-color);
     }
 
     #imageModal {
-        margin-top: 120%; /* Aumenta el margen superior del modal */
+        margin-top: 8rem; /* Aumenta el margen superior del modal */
     }
 }
 
@@ -905,7 +905,7 @@ background-color: var(--main-color);
     }
 
     #imageModal {
-        margin-top: 120%; /* Aumenta el margen superior del modal */
+        margin-top: 8rem; /* Aumenta el margen superior del modal */
     }
 }
 
@@ -917,7 +917,7 @@ background-color: var(--main-color);
     }
 
     #imageModal {
-        margin-top: 120%; /* Aumenta el margen superior del modal */
+        margin-top: 8rem; /* Aumenta el margen superior del modal */
     }
 }
 
@@ -929,6 +929,6 @@ background-color: var(--main-color);
     }
 
     #imageModal {
-        margin-top: 120%; /* Aumenta el margen superior del modal */
+        margin-top: 8rem; /* Aumenta el margen superior del modal */
     }
 }
