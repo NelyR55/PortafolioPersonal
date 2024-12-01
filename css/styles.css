@@ -888,78 +888,47 @@ background-color: var(--main-color);
 /* Para pantallas extremadamente pequeñas, menos de 450px */
 @media (max-width: 450px) {
     .certificaciones-item h2 {
-        font-size: 2.4rem;
-        margin-top: auto; 
+        font-size: 3rem; /* Ajusta el tamaño del título */
+        margin-top: 1rem; /* Ajusta el margen superior */
     }
-    
-    .certificaciones-item p {
-        font-size: 1.3rem;
-        margin-bottom: auto; 
+
+    #imageModal {
+        margin-top: 20%; /* Aumenta el margen superior del modal */
     }
-    .home-img img {
-        width: 55vw;
-        height: 90vw;
-    }
-    .habilidades h2,
-    .proyectos h2,
-    .contacto h2 {
-        font-size: 1rem; /* Tamaño de título para secciones */
-    }
-    .educacion h2{
-        font-size:7rem;
-    }
-  
 }
 
-/* Para pantallas ultra pequeñas, menos de 250px */
+/* Para pantallas ultra pequeñas, menos de 400px */
 @media (max-width: 400px) {
     .certificaciones-item h2 {
-        font-size: 2.4rem;
-        margin-top: auto; 
-    }
-    
-    .certificaciones-item p {
-        font-size: 1.3rem;
-        margin-bottom: auto; 
-    }
-    .home-img img {
-        width: 55vw;
-        height: 65vw;
-    }
-   
-  
-/* Para pantallas ultra pequeñas, menos de 250px */
-@media (max-width: 350px) {
-    .certificaciones-item h2 {
-        font-size: 2.4rem;
-        margin-top: auto; 
-    }
-    
-    .certificaciones-item p {
-        font-size: 1.3rem;
-        margin-bottom: auto; 
-    }
-    .home-img img {
-        width: 55vw;
-        height: 90vw;
+        font-size: 2.8rem; /* Ajusta el tamaño del título */
+        margin-top: 1.5rem; /* Ajusta el margen superior */
     }
 
-/* Para pantallas ultra pequeñas, menos de 250px */
+    #imageModal {
+        margin-top: 25%; /* Aumenta el margen superior del modal */
+    }
+}
+
+/* Para pantallas muy pequeñas, menos de 350px */
+@media (max-width: 350px) {
+    .certificaciones-item h2 {
+        font-size: 2.6rem;
+        margin-top: 1.5rem;
+    }
+
+    #imageModal {
+        margin-top: 30%; /* Aumenta el margen superior del modal */
+    }
+}
+
+/* Para pantallas mínimas, menos de 250px */
 @media (max-width: 250px) {
     .certificaciones-item h2 {
         font-size: 2.4rem;
-        margin-top: auto; 
+        margin-top: 2rem;
     }
-    
-    .certificaciones-item p {
-        font-size: 1.3rem;
-        margin-bottom: auto; 
+
+    #imageModal {
+        margin-top: 40%; /* Aumenta el margen superior del modal */
     }
-    .home-img img {
-        width: 55vw;
-        height: 90vw;
-    }
- 
-}
-}
 }
