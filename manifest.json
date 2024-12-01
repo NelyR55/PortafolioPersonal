@@ -1,0 +1,18 @@
+{
+    "short_name":"NELYR",
+    "name":"Portafolio Personal",
+    "icons":[
+    {
+        "src":"img/logo.png",
+        "sizes":"192x192",
+        "type":"image/png"
+    }
+    ],
+  "start_url":"/index.html",
+  "display":"standalone",
+  "orientation":"portrait",
+  "categories":["portafolio","personal"],
+  "background_color": "#ffffff",
+  "theme_color": "#000000"
+
+}

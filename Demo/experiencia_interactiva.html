@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxia Interactiva</title>
+    <style>
+        :root {
+            --bg-color: #080808;
+            --second-bg-color: #131313;
+            --text-color: white;
+            --main-color: #ff44a2;
+            --modal: #f566ad;
+        }
+
+        /* Estilos globales */
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        h1 {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--main-color);
+            font-size: 2rem;
+            text-shadow: 0 0 10px var(--main-color), 0 0 20px var(--modal);
+            z-index: 10;
+            text-align: center;
+        }
+
+        .back-btn {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--main-color);
+            color: var(--text-color);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 0 10px var(--main-color), 0 0 20px var(--modal);
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: var(--modal);
+            box-shadow: 0 0 15px var(--modal), 0 0 30px var(--main-color);
+        }
+
+        /* Media queries */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+                top: 8%;
+            }
+
+            .back-btn {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem;
+                top: 6%;
+            }
+
+            .back-btn {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Explora la Galaxia</h1>
+    <canvas id="galaxy"></canvas>
+    <a href="../index.html" class="back-btn">Volver al Portafolio</a>
+    <script>
+        const canvas = document.getElementById("galaxy");
+        const ctx = canvas.getContext("2d");
+
+        // Ajustar el tamaño del canvas al tamaño de la ventana
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particlesArray = [];
+        const colors = ["#ff44a2", "#f566ad", "#ffffff", "#d1d1d1"];
+
+        class Particle {
+            constructor(x, y, size, color, speedX, speedY) {
+                this.x = x;
+                this.y = y;
+                this.size = size;
+                this.color = color;
+                this.speedX = speedX;
+                this.speedY = speedY;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.shadowBlur = 20;
+                ctx.shadowColor = this.color;
+                ctx.fill();
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                // Reducir el tamaño gradualmente
+                if (this.size > 0.2) this.size -= 0.1;
+            }
+        }
+
+        function initParticles(e) {
+            for (let i = 0; i < 5; i++) {
+                const size = Math.random() * 5 + 2;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const speedX = (Math.random() * 3 - 1.5) * 2;
+                const speedY = (Math.random() * 3 - 1.5) * 2;
+                particlesArray.push(
+                    new Particle(e.x, e.y, size, color, speedX, speedY)
+                );
+            }
+        }
+
+        function handleParticles() {
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+                particlesArray[i].draw();
+
+                // Eliminar partículas pequeñas
+                if (particlesArray[i].size <= 0.3) {
+                    particlesArray.splice(i, 1);
+                    i--;
+                }
+            }
+        }
+
+        window.addEventListener("mousemove", (e) => {
+            initParticles(e);
+        });
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            handleParticles();
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Redimensionar el canvas cuando se cambie el tamaño de la ventana
+        window.addEventListener("resize", () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
