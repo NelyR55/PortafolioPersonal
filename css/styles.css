@@ -865,7 +865,7 @@ background-color: var(--main-color);
 
 /* Para pantallas más pequeñas de 600px */
 @media (max-width: 600px) {
-    .servicios-info h4 {
+    .secTi{
         font-size: 1.6rem;
     }
     .servicios-info p {
@@ -908,6 +908,9 @@ background-color: var(--main-color);
     .educacion h2{
         font-size:7rem;
     }
+    .secTi{
+        font-size: 1.6rem;
+    }
 }
 
 /* Para pantallas ultra pequeñas, menos de 250px */
@@ -924,11 +927,17 @@ background-color: var(--main-color);
         width: 55vw;
         height: 65vw;
     }
+    .secTi{
+        font-size: 1.6rem;
+    }
   
 /* Para pantallas ultra pequeñas, menos de 250px */
 @media (max-width: 350px) {
     .servicios-info h4 {
         font-size: 1.6rem; 
+    }
+    .secTi{
+        font-size: 1.6rem;
     }
     .servicios-info p {
         font-size: 1.1rem; 
@@ -953,6 +962,9 @@ background-color: var(--main-color);
     .home-img img {
         width: 55vw;
         height: 90vw;
+    }
+    .secTi{
+        font-size: 1.6rem;
     }
 }
 }
