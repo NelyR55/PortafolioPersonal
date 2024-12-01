@@ -897,7 +897,7 @@ background-color: var(--main-color);
     }
     .home-img img {
         width: 55vw;
-        height: 65vw;
+        height: 90vw;
     }
     .habilidades h2,
     .certificaciones h2,
@@ -937,7 +937,7 @@ background-color: var(--main-color);
     }
     .home-img img {
         width: 55vw;
-        height: 70vw;
+        height: 90vw;
     }
 
 /* Para pantallas ultra pequeñas, menos de 250px */
@@ -952,7 +952,7 @@ background-color: var(--main-color);
     }
     .home-img img {
         width: 55vw;
-        height: 70vw;
+        height: 90vw;
     }
 }
 }
