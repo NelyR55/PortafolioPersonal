@@ -887,13 +887,14 @@ background-color: var(--main-color);
 
 /* Para pantallas extremadamente pequeñas, menos de 450px */
 @media (max-width: 450px) {
-    .certificaciones-info h4 {
-        font-size: 1.6rem; 
+    .certificaciones-item h2 {
+        font-size: 2.4rem;
+        margin-top: auto; 
     }
-    .certificaciones-info p {
-        font-size: 1.1rem; 
-        line-height: 1.4; 
-        margin-top: 0.5rem;
+    
+    .certificaciones-item p {
+        font-size: 1.3rem;
+        margin-bottom: auto; 
     }
     .home-img img {
         width: 55vw;
@@ -907,41 +908,36 @@ background-color: var(--main-color);
     .educacion h2{
         font-size:7rem;
     }
-    .secTi{
-        font-size: 1.6rem;
-    }
+  
 }
 
 /* Para pantallas ultra pequeñas, menos de 250px */
 @media (max-width: 400px) {
-    .servicios-info h4 {
-        font-size: 1.6rem; 
+    .certificaciones-item h2 {
+        font-size: 2.4rem;
+        margin-top: auto; 
     }
-    .servicios-info p {
-        font-size: 1.1rem; 
-        line-height: 1.4; 
-        margin-top: 0.5rem;
+    
+    .certificaciones-item p {
+        font-size: 1.3rem;
+        margin-bottom: auto; 
     }
     .home-img img {
         width: 55vw;
         height: 65vw;
     }
-    .secTi{
-        font-size: 1.6rem;
-    }
+   
   
 /* Para pantallas ultra pequeñas, menos de 250px */
 @media (max-width: 350px) {
-    .certificaciones h4 {
-        font-size: 1.6rem; 
+    .certificaciones-item h2 {
+        font-size: 2.4rem;
+        margin-top: auto; 
     }
-    .secTi{
-        font-size: 1.6rem;
-    }
-    .certificaciones p {
-        font-size: 1.1rem; 
-        line-height: 1.4; 
-        margin-top: 0.5rem;
+    
+    .certificaciones-item p {
+        font-size: 1.3rem;
+        margin-bottom: auto; 
     }
     .home-img img {
         width: 55vw;
@@ -950,21 +946,20 @@ background-color: var(--main-color);
 
 /* Para pantallas ultra pequeñas, menos de 250px */
 @media (max-width: 250px) {
-    .certificaciones h4 {
-        font-size: 1.6rem; 
+    .certificaciones-item h2 {
+        font-size: 2.4rem;
+        margin-top: auto; 
     }
-    .certificaciones p {
-        font-size: 1.1rem; 
-        line-height: 1.4; 
-        margin-top: 0.5rem;
+    
+    .certificaciones-item p {
+        font-size: 1.3rem;
+        margin-bottom: auto; 
     }
     .home-img img {
         width: 55vw;
         height: 90vw;
     }
-    .secTi{
-        font-size: 1.6rem;
-    }
+ 
 }
 }
 }
